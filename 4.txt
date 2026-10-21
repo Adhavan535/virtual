@@ -3,3 +3,20 @@ EX 4 : Citrix Xenserver
 Server IP: 10.10.25.140
 username: root
 password: TCEIT@321
+
+public class adhav {
+    public static void main(String args[]) {
+        long st = System.nanoTime();
+        long sum = 0;
+
+        for (long i = 0; i < 1000000000L; i++) {
+            sum += i;
+        }
+
+        long et = System.nanoTime();
+        double ds = (et - st) / 1000000000.0;
+
+        System.out.println("sum is " + sum);
+        System.out.println("Execution Time " + ds + " seconds");
+    }
+}
