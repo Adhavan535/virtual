@@ -1,0 +1,16 @@
+5(a) KVM Installation
+HV-support check
+egrep -c "lm" /proc/cpuinfo
+uname -a 
+ls /lib/modules/5.4.0-84-generic/kernel/arch/x86/kvm/kvm*
+sudo apt install qemu-kvm libvirt-bin bridge-utils virt-manager qemu-system
+sudo nano /etc/libvirt/libvirtd.conf
+grep ^[^#] /etc/libvirt/libvirtd.conf
+sudo systemctl restart libvirtd
+virsh list -> virsh -> version -> nodeinfo 
+importing existing vm:
+sudo virt-manager
+cirros 0.5.1 x86 64 disk img
+wget https://download.cirros-cloud.net/0.5.1/cirros-0.5.1-x86_64-disk.img
+
+
